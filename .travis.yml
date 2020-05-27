@@ -1,0 +1,21 @@
+os:
+- linux
+dist: bionic
+language: python
+
+services:
+- docker
+
+if: type != pull_request  # do not build anything for PRs
+
+stages:
+- name: test
+
+
+jobs:
+  include:
+  - stage: test
+    name: Run style, unit and integration tests
+    script:
+    python scr/file.py
+    python a.py
