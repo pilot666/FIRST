@@ -15,5 +15,5 @@ jobs:
   - stage: test
     name: Run style, unit and integration tests
     script:
-    python scr/file.py
-    python a.py
+    - python scr/file.py
+    - python a.py
